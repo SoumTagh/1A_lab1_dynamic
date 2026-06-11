@@ -1,14 +1,14 @@
 import json
 import pandas as pd
 
-# read the JSON file
+# reading the JSON file
 with open("producthunt_first_page.json", "r", encoding="utf-8") as f:
     products = json.load(f)
 
-# convert to DataFrame
+# converting to dataframe
 df = pd.DataFrame(products)
 print(df)
 
-# save to CSV
+# saving to CSV
 df.to_csv("producthunt_first_page.csv", index=False, encoding="utf-8")
 print("CSV saved!")
